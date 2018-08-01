@@ -1,8 +1,7 @@
 package com.demo.common;
 
-import com.demo.blog.BlogController;
 import com.demo.common.model._MappingKit;
-import com.demo.index.IndexController;
+import com.demo.controller.LoginController;
 import com.jfinal.config.Constants;
 import com.jfinal.config.Handlers;
 import com.jfinal.config.Interceptors;
@@ -10,6 +9,7 @@ import com.jfinal.config.JFinalConfig;
 import com.jfinal.config.Plugins;
 import com.jfinal.config.Routes;
 import com.jfinal.core.JFinal;
+import com.jfinal.kit.PathKit;
 import com.jfinal.kit.PropKit;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.druid.DruidPlugin;
@@ -53,7 +53,7 @@ public class DemoConfig extends JFinalConfig {
         me.setDevMode(PropKit.getBoolean("devMode", false));
 
         JFinal3BeetlRenderFactory rf = new JFinal3BeetlRenderFactory();
-        rf.config();
+        rf.config(PathKit.getWebRootPath() + "/WEB-INF/beetl");
         me.setRenderFactory(rf);
 
         GroupTemplate gt = rf.groupTemplate;
@@ -65,7 +65,7 @@ public class DemoConfig extends JFinalConfig {
      * 配置路由
      */
     public void configRoute(Routes me) {
-        me.add("/", IndexController.class, "/index");    // 第三个参数为该Controller的视图存放路径
+        me.add("/", LoginController.class);
     }
 
     public void configEngine(Engine me) {

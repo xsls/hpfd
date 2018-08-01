@@ -1,6 +1,4 @@
-package com.demo.blog;
-
-import com.jfinal.plugin.activerecord.Page;
+package com.demo.service;
 
 /**
  * 本 demo 仅表达最为粗浅的 jfinal 用法，更为有价值的实用的企业级用法
@@ -27,7 +25,7 @@ public class BlogService {
 //	private Blog dao = new Blog().dao();
 //
 //  public Page<Blog> paginate(int pageNumber, int pageSize) {
-//		return dao.paginate(pageNumber, pageSize, "select *", "from blog order by id asc");
+//		return dao.paginate(pageNumber, pageSize, "select *", "from interceptor order by id asc");
 //	}
 //
 //	public Blog findById(int id) {

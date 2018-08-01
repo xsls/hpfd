@@ -1,5 +1,7 @@
-package com.demo.blog;
+package com.demo.controller;
 
+import com.demo.interceptor.BlogInterceptor;
+import com.demo.service.BlogService;
 import com.jfinal.aop.Before;
 import com.jfinal.core.Controller;
 
