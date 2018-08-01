@@ -9,8 +9,5 @@
         <module name="jfinal_demo_for_maven" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="jfinal_demo_for_maven" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>
