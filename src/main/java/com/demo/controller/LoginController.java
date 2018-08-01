@@ -1,5 +1,6 @@
 package com.demo.controller;
 
+import com.demo.service.LoginService;
 import com.jfinal.core.Controller;
 
 /**
@@ -9,7 +10,11 @@ import com.jfinal.core.Controller;
  * LoginController
  */
 public class LoginController extends Controller {
+
+    LoginService service = LoginService.me;
+
     public void index() {
+        setAttr("userList", service.paginate(getParaToInt(0, 1), 10).getList());
         render("login.html");
     }
 }

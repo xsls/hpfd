@@ -65,7 +65,7 @@ public class DemoConfig extends JFinalConfig {
      * 配置路由
      */
     public void configRoute(Routes me) {
-        me.add("/", LoginController.class);
+        me.add("/login", LoginController.class);
     }
 
     public void configEngine(Engine me) {
