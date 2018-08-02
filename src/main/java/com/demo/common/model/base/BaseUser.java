@@ -27,13 +27,13 @@ public abstract class BaseUser<M extends BaseUser<M>> extends Model<M> implement
 		return getStr("userName");
 	}
 
-	public M setPhoneNumber(java.lang.Integer phoneNumber) {
+	public M setPhoneNumber(java.lang.String phoneNumber) {
 		set("phoneNumber", phoneNumber);
 		return (M)this;
 	}
 	
-	public java.lang.Integer getPhoneNumber() {
-		return getInt("phoneNumber");
+	public java.lang.String getPhoneNumber() {
+		return getStr("phoneNumber");
 	}
 
 	public M setPassword(java.lang.Integer password) {
