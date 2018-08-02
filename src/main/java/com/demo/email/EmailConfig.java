@@ -1,5 +1,10 @@
 package com.demo.email;
 
+/**
+ * 描述：
+ * 作者：zc741
+ * 时间：2018/8/1 12:45.
+ */
 public class EmailConfig {
     private String mailServerHost;
     private String mailServerPort;

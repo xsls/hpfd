@@ -12,13 +12,16 @@ import java.io.UnsupportedEncodingException;
 import java.util.Date;
 import java.util.Properties;
 
+/**
+ * 描述：
+ * 作者：zc741
+ * 时间：2018/8/1 12:45.
+ */
 public class EmailManager {
 
     private static EmailConfig config = new EmailConfig();
 
     private static Logger logger = LoggerFactory.getLogger(EmailManager.class);
-
-
 
     static {
         try (InputStream stream = ConfigUtils.getInputStream("email.properties")) {
