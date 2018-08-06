@@ -18,6 +18,15 @@ public abstract class BaseUser<M extends BaseUser<M>> extends Model<M> implement
 		return getInt("id");
 	}
 
+	public M setUserId(java.lang.Integer userId) {
+		set("userId", userId);
+		return (M)this;
+	}
+	
+	public java.lang.Integer getUserId() {
+		return getInt("userId");
+	}
+
 	public M setUserName(java.lang.String userName) {
 		set("userName", userName);
 		return (M)this;
@@ -79,6 +88,51 @@ public abstract class BaseUser<M extends BaseUser<M>> extends Model<M> implement
 	
 	public java.lang.String getInvitationCode() {
 		return getStr("invitationCode");
+	}
+
+	public M setScore(java.lang.Integer score) {
+		set("score", score);
+		return (M)this;
+	}
+	
+	public java.lang.Integer getScore() {
+		return getInt("score");
+	}
+
+	public M setFunds(java.lang.Integer funds) {
+		set("funds", funds);
+		return (M)this;
+	}
+	
+	public java.lang.Integer getFunds() {
+		return getInt("funds");
+	}
+
+	public M setCurrentTask(java.lang.String currentTask) {
+		set("currentTask", currentTask);
+		return (M)this;
+	}
+	
+	public java.lang.String getCurrentTask() {
+		return getStr("currentTask");
+	}
+
+	public M setTaskIsEnd(java.lang.Integer taskIsEnd) {
+		set("taskIsEnd", taskIsEnd);
+		return (M)this;
+	}
+	
+	public java.lang.Integer getTaskIsEnd() {
+		return getInt("taskIsEnd");
+	}
+
+	public M setCurrentTaskIsEnd(java.lang.Integer currentTaskIsEnd) {
+		set("currentTaskIsEnd", currentTaskIsEnd);
+		return (M)this;
+	}
+	
+	public java.lang.Integer getCurrentTaskIsEnd() {
+		return getInt("currentTaskIsEnd");
 	}
 
 }
